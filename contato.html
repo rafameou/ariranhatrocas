@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width; initial-scale=1.0">
     <title>Contato - AriranhaTrocas</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <!-- INICIO DO TOPO -->
     <hr>
-    <a href="index.html"><img src="logo.png" alt="AriranhaTrocas"></a>
+    <centered>
+    <a href="index.html"><img src="logo.png" width="auto" alt="AriranhaTrocas" class="logo"></a>
     <br>
-    <i>Fazendo trocas igual uma verdadeira <u>Pteronura brasiliensis</u>! Porém não temos peixe para hoje.</i>
+    <i>Fazendo trocas igual uma verdadeira <a href="https://www.ufrgs.br/faunadigitalrs/mamiferos/ordem-carnivora/familia-mustelidae/ariranha-pteronura-brasiliensis/"><u>Pteronura brasiliensis</u></a>! Porém não temos peixe para hoje.</i>
     <hr>
-    <a href="index.html"><b>Início</b></a> - <a href="estoque.html"><b>Estoque</b></a> - <a href="troca.html"><b>Faça uma troca</b></a> - <a href="contato.html"><b>Contato</b></a> - <a href="registro.html"><b>Registro</b></a> 
+    <a href="index.html" class="btn"><b>Início</b></a> <a href="estoque.html" class="btn"><b>Estoque</b></a> <a href="troca.html" class="btn"><b>Faça uma troca</b></a> <a href="contato.html" class="btn"><b>Contato</b></a> <a href="registro.html" class="btn"><b>Registro</b></a> 
+    </centered>
     <hr>
     <!-- FINAL DO TOPO -->
 
+
     <!-- INICIO DO CORPO -->
-    <h1>Contato:</h1>
+    <centered>
+    <h1>Contato</h1>
     <form>
-      <label for="nome">Nome:</label><br>
+      <label for="nome">Nome</label><br>
       <input type="text" id="nome" name="nome"><br>
-      <label for="email">E-Mail:</label><br>
+      <label for="email">E-Mail</label><br>
       <input type="email" id="email" name="email"><br>
-      <label for="assunto">Assunto:</label>
+      <label for="assunto">Assunto</label><br>
       <select name="assunto" id="assunto">
         <option value="s">Sugestões</option>
         <option value="r">Reclamações</option>
         <option value="e">Elogios</option>
       </select><br>
-      <label for="mensagem">Mensagem:</label><br>
+      <label for="mensagem">Mensagem</label><br>
       <input type="text" id="mensagem" name="mensagem"><br>
-      <input type="submit" value="Enviar">
+      <input type="submit" value="Enviar" class="btn">
     </form>
+  </centered>
     <!-- FINAL DO CORPO -->
 
     <!-- INICIO DO RODAPE -->
@@ -50,7 +55,7 @@
           <li>Atendimento e suporte técnico do AriranhaTrocas funciona 0 horas por dia, nenhum dia da semana no telefone: +55 (42) 9 8402-6139</li>
       </ul>
     </ul>
-    <a href="#top">Voltar para o topo.</a>
+    <centered><a class="btn" href="#top">Voltar para o topo.</a></centered>
     </footer>
     <hr>
     <!-- FINAL DO RODAPE --> 
