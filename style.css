@@ -1,0 +1,108 @@
+* {
+    transition: width 0.5s, height 0.5s, padding 0.2s, color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+body {
+  font-family: Arial;
+}
+
+@media (max-width: 780px)
+{
+	/*logo passa do limite*/
+	.logo {
+		width: 100%;
+	}
+
+	/*botoes quebram em pequenas resolucoes, 
+	entao vou mudar para o modo bloco
+	suponho q n eh assim q vc faz suporte pra mobile, 
+	mas fazer oq*/
+	.btn{
+		display: block;
+	}
+}
+
+.logo {
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+  border-radius: 4px;
+}
+
+.logo:hover {
+	border-left-color: limegreen;
+	border-bottom-color: limegreen;
+}
+
+hr {
+  /*border: 1px dashed green;*/
+  border: none;
+}
+
+centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: limegreen;
+  color: black;
+  padding: 6px;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.fa {
+  display: flex;
+  border-left: 5px solid green;
+  border-radius: 4px;
+  padding: 5px;
+
+  text-decoration: none;
+  color: black;
+}
+
+.fa:hover {
+	border-color: limegreen;
+	padding: 6px;
+}
+
+.fimg {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 5px;
+  width: 5%;
+}
+
+.fimg:hover {
+  width: 10%;
+}
+
+.fimganun {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 5px;
+  width: 15%;
+}
+
+.fimganun:hover {
+  width: 40%;
+}
+
+
+footer {
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+  padding: 10px;
+}
