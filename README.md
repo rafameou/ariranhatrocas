@@ -1,2 +1,2 @@
 # ariranhatrocas
-pagina inicial = index.html
+Pequeno website desenvolvido para a matéria CC02D.
