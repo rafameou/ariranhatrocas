@@ -12,40 +12,31 @@
     <a href="index.html"><img src="logo.png" width="auto" alt="AriranhaTrocas" class="logo"></a>
     <br>
     <i id="slogan">Fazendo trocas igual uma verdadeira <a href="https://www.ufrgs.br/faunadigitalrs/mamiferos/ordem-carnivora/familia-mustelidae/ariranha-pteronura-brasiliensis/"><u>Pteronura brasiliensis</u></a>! Porém, não temos peixe para hoje</i>
-    <script type="text/javascript"> 
-    let rSNome = sessionStorage.getItem('nome');
-    document.getElementById("slogan").textContent += rSNome ? `, né ${rSNome}!` : "."; 
-    </script>
     <hr>
-    <a href="index.html" class="btn"><b>Início</b></a> <a href="estoque.html" class="btn"><b>Estoque</b></a> <a href="troca.html" class="btn"><b>Faça uma troca</b></a> <a href="contato.html" class="btn"><b>Contato</b></a> <a href="registro.html" class="btn"><b>Registro</b></a> 
+    <a href="index.html" class="btn"><b>Início</b></a> <a href="estoque.html" class="btn"><b>Estoque</b></a> <a href="troca.html" class="btn"><b id="carrinho">Carrinho [</b></a> <a href="contato.html" class="btn"><b>Contato</b></a> <a href="registro.html" class="btn"><b>Registro</b></a> 
     </centered>
+    <script type="text/javascript"> 
+    let rSNome = sessionStorage.getItem("nome");
+    document.getElementById("slogan").textContent += rSNome ? `, né ${rSNome}!` : "."; 
+    let rSCar = JSON.parse(sessionStorage.getItem("carrinho"));
+    document.getElementById("carrinho").textContent += (!rSCar ? "x" : rSCar.length) + "]";
+    </script>
     <hr>
     <!-- FINAL DO TOPO -->
 
     <!-- INICIO DO CORPO -->
-    <centered>
-    <h1>Vamos fazer uma troca?</h1>
-    <h2>Primeiro vamos precisar de alguns dados pessoais.</h2>
-    <form>
-      <label for="nome">Nome</label><br>
-      <input type="text" id="nome" name="nome"><br>
-      <label for="email">E-Mail</label><br>
-      <input type="email" id="email" name="email"><br>
-    </form>
-    <h2>Agora precisamos saber qual dispositivo você quer trocar.</h2>
-    <form>
-      <label for="marca">Marca</label><br>
-      <input type="text" id="marca" name="marca"><br>
-      <label for="modelo">Modelo</label><br>
-      <input type="text" id="modelo" name="modelo"><br>
-      <label for="idade">Ano de lançamento (apenas números)</label><br>
-      <input type="number" id="idade" name="idade" min="1980" max="2038" value="2010"><br>
-      <label for="imgfrente">Quatro (4) ou mais imagens, contando a frente, traseira e partes laterais do dispositivo (selecione varias imagens usando <i>SHIFT</i> ou <i>CTRL</i> no seu buscador de arquivos):</label><br>
-      <input type="file" id="imgfrente" name="imgfrente" multiple><br>
-      <h3>Após clicar no botão abaixo, seu dispositivo será avaliado em 24 horas. Uma confirmação será enviada para seu E-Mail com mais instruções.</h3>
-      <input type="submit" value="Registrar" class="btn">
-    </form>
-  </centered>
+    <h2>Carrinho</h2>
+    <p id="basezinha">Você não está <a href="registro.html">registrado</a>, ou JavaScript está desativado.</p>
+    <label for="cupom">Cupom:</label>
+    <input type="text" id="cupom" name="cupom">
+    <bordinha id="desconto">Desconto: R$0,00</bordinha>
+    <bordinha id="total">Total: R$0,00</bordinha>
+    <br>
+    <br>
+    <a class="btn" id="comprar"><b>Finalizar compra!</b></a>
+    <script type="text/javascript" src="js/estoque.js"></script>
+    <script type="text/javascript" src="js/troca.js"></script>
+    <noscript><h6><i id="errinho" class="errinho">Seu browser não suporta JavaScript, os destaques não podem ser carregados.</i></h6></noscript>
     <!-- FINAL DO CORPO -->
 
     <!-- INICIO DO RODAPE -->

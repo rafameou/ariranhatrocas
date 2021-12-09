@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width; initial-scale=1.0">
-    <title>Estoque - AriranhaTrocas</title>
+    <title>AriranhaTrocas</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
@@ -25,18 +25,22 @@
     <!-- FINAL DO TOPO -->
 
     <!-- INICIO DO CORPO -->
-    <h2>Estoque</h2>
-    <i>Para verificar melhor, clique no dispositivo.</i>
+    <centered>
+    <a href="estoque.html" class="btn">Voltar para o estoque.</a><br>
+    <h2><bordinha id="nome">Carregando...</bordinha></h2>
+    <bordinha id="preco">Carregando...</bordinha>
+    <h2>Imagens</h2>
+    <img id="img1" class="fimganun" src="estoque/imagens/carregando.gif" alt="Imagem 1"><img id="img2" class="fimganun" src="estoque/imagens/carregando.gif" alt="Imagem 2">
     <br>
-    <label for="sort">Ordernar por </label> 
-    <select name="sort" id="sort">
-      <option value="nome">Nome</option>
-      <option value="preco">Preço</option>
-    </select>
     <br>
-    <p id="cargando">Carregando...</p>
+    <a id="addcarrinho" class="btn">Adicionar ao carrinho!</a>
+    <h2>Estado de conservação</h2>
+    <text id="conserv">Carregando...</text><br>
+    <h2>Especificações Técnicas</h2>
+    <text id="specs">Carregando...</text><br>
+  </centered>
     <script type="text/javascript" src="js/estoque.js"></script>
-    <script type="text/javascript" src="js/estoque_page.js"></script>
+    <script type="text/javascript" src="js/produto.js"></script>
     <noscript><h6><i id="errinho" class="errinho">Seu browser não suporta JavaScript, os destaques não podem ser carregados.</i></h6></noscript>
     <!-- FINAL DO CORPO -->
 

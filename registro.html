@@ -12,13 +12,15 @@
     <a href="index.html"><img src="logo.png" width="auto" alt="AriranhaTrocas" class="logo"></a>
     <br>
     <i id="slogan">Fazendo trocas igual uma verdadeira <a href="https://www.ufrgs.br/faunadigitalrs/mamiferos/ordem-carnivora/familia-mustelidae/ariranha-pteronura-brasiliensis/"><u>Pteronura brasiliensis</u></a>! Porém, não temos peixe para hoje</i>
-    <script type="text/javascript"> 
-    let rSNome = sessionStorage.getItem('nome');
-    document.getElementById("slogan").textContent += rSNome ? `, né ${rSNome}!` : "."; 
-    </script>
     <hr>
-    <a href="index.html" class="btn"><b>Início</b></a> <a href="estoque.html" class="btn"><b>Estoque</b></a> <a href="troca.html" class="btn"><b>Faça uma troca</b></a> <a href="contato.html" class="btn"><b>Contato</b></a> <a href="registro.html" class="btn"><b>Registro</b></a> 
+    <a href="index.html" class="btn"><b>Início</b></a> <a href="estoque.html" class="btn"><b>Estoque</b></a> <a href="troca.html" class="btn"><b id="carrinho">Carrinho [</b></a> <a href="contato.html" class="btn"><b>Contato</b></a> <a href="registro.html" class="btn"><b>Registro</b></a> 
     </centered>
+    <script type="text/javascript"> 
+    let rSNome = sessionStorage.getItem("nome");
+    document.getElementById("slogan").textContent += rSNome ? `, né ${rSNome}!` : "."; 
+    let rSCar = JSON.parse(sessionStorage.getItem("carrinho"));
+    document.getElementById("carrinho").textContent += (!rSCar ? "x" : rSCar.length) + "]";
+    </script>
     <hr>
     <!-- FINAL DO TOPO -->
 
@@ -48,7 +50,7 @@
       <input type="text" id="uf" name="uf"><br>
       <input type="submit" value="Registrar" class="btn">
     </form>
-    <script type="text/javascript" src="registro.js"></script>
+    <script type="text/javascript" src="js/registro.js"></script>
     <noscript><h6><i id="errinho" class="errinho">Seu browser não suporta JavaScript, seus dados não poderão ser validados.</i></h6></noscript>
   </centered>
     <!-- FINAL DO CORPO -->

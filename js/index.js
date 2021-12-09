@@ -46,10 +46,10 @@ function recarregar(up)
         }
     }
 
-    img1.src = `estoque/imagens/${posi}a.jpg`;
-    img2.src = `estoque/imagens/${posi}b.jpg`;
+    img1.src = `estoque/imagens/${produtos[posi].index}a.jpg`;
+    img2.src = `estoque/imagens/${produtos[posi].index}b.jpg`;
     nomeprod.text = produtos[posi].nome;
-    nomeprod.href = "";
+    nomeprod.href = `produto.html#${produtos[posi].index}`;
     uau.textContent = `Com ${produtos[posi].specs[0]}, apenas R$${produtos[posi].preco},00!`;
 }
 
@@ -65,6 +65,7 @@ proximo.onclick = function()
 
 window.setInterval(function() 
 {
+    //bom dia
     if (img1.matches(':hover') || 
         img2.matches(':hover') || 
         nomeprod.matches(':hover') || 
@@ -79,6 +80,7 @@ window.setInterval(function()
         recarregar(2);
     }
 
+    //isso nao existe
     barrinha.textContent = ">>>>>>>>".repeat(progresso);
     barrinhaA.textContent = ">>>>>>>>".repeat(progressoA);
 },  1000);

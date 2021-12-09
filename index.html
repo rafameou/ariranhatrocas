@@ -12,21 +12,23 @@
     <a href="index.html"><img src="logo.png" width="auto" alt="AriranhaTrocas" class="logo"></a>
     <br>
     <i id="slogan">Fazendo trocas igual uma verdadeira <a href="https://www.ufrgs.br/faunadigitalrs/mamiferos/ordem-carnivora/familia-mustelidae/ariranha-pteronura-brasiliensis/"><u>Pteronura brasiliensis</u></a>! Porém, não temos peixe para hoje</i>
-    <script type="text/javascript"> 
-    let rSNome = sessionStorage.getItem('nome');
-    document.getElementById("slogan").textContent += rSNome ? `, né ${rSNome}!` : "."; 
-    </script>
     <hr>
-    <a href="index.html" class="btn"><b>Início</b></a> <a href="estoque.html" class="btn"><b>Estoque</b></a> <a href="troca.html" class="btn"><b>Faça uma troca</b></a> <a href="contato.html" class="btn"><b>Contato</b></a> <a href="registro.html" class="btn"><b>Registro</b></a> 
+    <a href="index.html" class="btn"><b>Início</b></a> <a href="estoque.html" class="btn"><b>Estoque</b></a> <a href="troca.html" class="btn"><b id="carrinho">Carrinho [</b></a> <a href="contato.html" class="btn"><b>Contato</b></a> <a href="registro.html" class="btn"><b>Registro</b></a> 
     </centered>
+    <script type="text/javascript"> 
+    let rSNome = sessionStorage.getItem("nome");
+    document.getElementById("slogan").textContent += rSNome ? `, né ${rSNome}!` : "."; 
+    let rSCar = JSON.parse(sessionStorage.getItem("carrinho"));
+    document.getElementById("carrinho").textContent += (!rSCar ? "x" : rSCar.length) + "]";
+    </script>
     <hr>
     <!-- FINAL DO TOPO -->
 
     <!-- INICIO DO CORPO -->
     <centered>
     <h1><i class="coolbackground">Bem-Vindo ao AriranhaTrocas!</i></h1>
-    <h3>Já pensou que incrível poder trocar seu eletrônico por outro igual você troca seu carro seminovo?</h3>
-    <i>Para efetuar uma troca utilize o campo de registro e de troca acima, após a confirmação via e-mail, você recebera o endereço para enviar o produto e local para pagar o valor extra (se necessário após escolher o novo produto).</i>
+    <h3>Já pensou que incrível poder trocar seu eletrônico por outro, igual você troca seu carro seminovo?</h3>
+    <i>Para efetuar uma troca utilize o campo de registro, após a confirmação via e-mail, você recebera o endereço para enviar o produto e local para pagar o valor extra (se necessário após escolher o novo produto).</i>
     <h2>Destaques de hoje!</h2>
     <i>Clique em estoque acima para ver em forma de lista!</i>
     <br>
@@ -43,8 +45,8 @@
     <b id="barrinha" class="bar"></b><b id="barrinhaA" class="barA">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></b>
     <h5 id="uau">Carregando...</h5>
     </centered>
-    <script type="text/javascript" src="estoque.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="js/estoque.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <noscript><h6><i id="errinho" class="errinho">Seu browser não suporta JavaScript, os destaques não podem ser carregados.</i></h6></noscript>
     <!-- FINAL DO CORPO -->
 
