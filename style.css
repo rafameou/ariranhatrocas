@@ -93,6 +93,25 @@ ul {
   list-style-type: square;
 }
 
+.bar {
+  background-color: limegreen;
+  border: 2px solid green;
+  border-right: none;
+  color: limegreen;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: xx-small;
+}
+
+.barA {
+  border: 2px solid dimgray;
+  border-left: none;
+  color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: xx-small;
+}
+
 .fa {
   display: flex;
   border-left: 5px solid green;
@@ -136,6 +155,19 @@ ul {
   border-color: limegreen;
   border-width: 3px;
   width: 30%;
+}
+
+.fimgindx {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 5px;
+  width: 15%;
+}
+
+.fimgindx:hover {
+  border-color: limegreen;
+  border-width: 3px;
+  width: 16%;
 }
 
 bordinha {
