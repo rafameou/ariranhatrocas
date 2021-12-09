@@ -1,5 +1,7 @@
 let nome = document.getElementById("nome");
 let email = document.getElementById("email");
+let nasci = document.getElementById("nasci");
+let senha = document.getElementById("senha");
 let cpf = document.getElementById("cpf");
 let cep = document.getElementById("cep");
 let rua = document.getElementById("rua");
@@ -139,6 +141,8 @@ form.addEventListener("submit", function (event)
   //imAgiNA sE TiVeSSe UmA FoRmA mElHoR De FaZeR IsSo
   checar(nome);
   checar(email);
+  checar(nasci);
+  checar(senha);
   checar(cpf);
   checar(cep);
   checar(rua);
@@ -150,6 +154,7 @@ form.addEventListener("submit", function (event)
   {
     errinho.className = "errinho";
     errinho.textContent = "Todos os campos precisam ser preenchidos.";
+    document.location.href = "#errinho";
     event.preventDefault();
     return false;
   }
@@ -158,6 +163,25 @@ form.addEventListener("submit", function (event)
   {
     errinho.className = "errinho";
     errinho.textContent = "CPF Inválido.";
+    document.location.href = "#errinho";
+    event.preventDefault();
+    return false;
+  }
+
+  if (new Date().getFullYear() - parseInt(nasci.value.split("-")[0]) < 18)
+  {
+    errinho.className = "errinho";
+    errinho.textContent = "Você precisa ter 18 anos ou mais.";
+    document.location.href = "#errinho";
+    event.preventDefault();
+    return false;
+  }
+
+  if (senha.value.length < 7)
+  {
+    errinho.className = "errinho";
+    errinho.textContent = "A senha precisa conter no minimo 8 digitos.";
+    document.location.href = "#errinho";
     event.preventDefault();
     return false;
   }
@@ -167,6 +191,7 @@ form.addEventListener("submit", function (event)
   {
   	errinho.className = "errinho";
   	errinho.textContent = "O e-mail não é válido.";
+    document.location.href = "#errinho";
     event.preventDefault();
     return false;
   }
@@ -177,6 +202,8 @@ form.addEventListener("submit", function (event)
   */
   salvar(nome);
   salvar(email);
+  salvar(nasci);
+  //salvar(senha); q tal não
   salvar(cpf);
   salvar(cep);
   salvar(rua);
@@ -186,6 +213,7 @@ form.addEventListener("submit", function (event)
 
   errinho.className = "coolbackgroundreversed";
   errinho.textContent = `Registrado/Logado com sucesso! Bem-Vindo ${nome.value}!`;
+  document.location.href = "#errinho";
   event.preventDefault();
   return false;
 }, false);
